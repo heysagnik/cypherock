@@ -124,7 +124,7 @@ export default function App() {
           />
         </NavItem>
         <Collapse in={wallets.isOpen}>
-          <NavItem pl="12" py="2" colorScheme='yellow'>
+          <NavItem pl="12" py="2" color='yellow'>
             Wallet 1
           </NavItem>
           <NavItem pl="12" py="2">
@@ -183,7 +183,7 @@ export default function App() {
               
           
           <ButtonGroup gap='2' align='right'>
-             <Tag colorScheme="#F5CEA3"><FiCheck color="#4848F6"/> <TagLabel>Synchronized</TagLabel></Tag>
+             <Tag colorScheme="#F5CEA3"><TagLeftIcon as={<FiCheck color="#4848F6"/>}/><TagLabel>Synchronized</TagLabel></Tag>
             <IconButton icon={<FiDisc/>} onClick={toggleColorMode} />
             <IconButton icon={<FiLock color="#CAA276"/>} />
           </ButtonGroup>
