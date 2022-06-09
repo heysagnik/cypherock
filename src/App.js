@@ -159,7 +159,7 @@ export default function App() {
         <Flex
           as="header"
           align="center"
-          justify="space-between"
+          justify="flex-end"
           w="full"
           px="4"
           bg={useColorModeValue("white", "gray.800")}
