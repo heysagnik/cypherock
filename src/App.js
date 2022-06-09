@@ -173,7 +173,7 @@ export default function App() {
 
           <Flex align="center">
               <HStack spacing="4">
-                <Box w= "950px"/>
+                <Box w= "900px"/>
               <FiCheck color="#4848F6"/> <Text color="#F5CEA3">Synchronized</Text>
           
           <ButtonGroup gap='2'>
