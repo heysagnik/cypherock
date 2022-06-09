@@ -180,7 +180,7 @@ export default function App() {
               
           
           <ButtonGroup gap='2' align='right'>
-            <FiCheck color="#4848F6"/> <Text color="#F5CEA3">Synchronized</Text>
+             <Text color="#F5CEA3"><FiCheck color="#4848F6"/> Synchronized</Text>
             <IconButton icon={<FiDisc/>} onClick={toggleColorMode} />
             <IconButton icon={<FiLock color="#CAA276"/>} />
           </ButtonGroup>
