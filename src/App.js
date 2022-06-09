@@ -38,13 +38,15 @@ import React from "react";
 import {  Button,useModals } from '@saas-ui/react';
 import {WithContent} from './components/Steps';
 import Logo from './logo.svg';
+import { useColorMode } from "@chakra-ui/react";
 
 export default function App() {
   const sidebar = useDisclosure();
   const wallets = useDisclosure();
   const color = useColorModeValue("gray.600", "gray.300");
   const modals = useModals();
-
+  const { colorMode, toggleColorMode } = useColorMode()
+  
   const NavItem = (props) => {
     const { icon, children, ...rest } = props;
     return (
@@ -173,12 +175,12 @@ export default function App() {
 
           <Flex align="center">
               <HStack spacing="4">
-                <Box width='900px'/>
+                <Box width='980px'/>
        
               <FiCheck color="#4848F6"/> <Text color="#F5CEA3">Synchronized</Text>
           
           <ButtonGroup gap='2'>
-            <IconButton icon={<FiDisc/>} />
+            <IconButton icon={<FiDisc/>} onClick={toggleColorMode} />
             <IconButton icon={<FiLock color="#CAA276"/>} />
           </ButtonGroup>
           </HStack>

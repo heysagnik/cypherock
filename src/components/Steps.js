@@ -3,8 +3,7 @@ import {
     StepperSteps,
     StepperStep,
     StepperCompleted,
-    Button,
-   Br
+
 
   } from '@saas-ui/react'
 import {
@@ -14,7 +13,9 @@ import {
     ButtonGroup,
     VStack,
     Center,
-    HStack
+    HStack,
+    Button,
+    useColorModeValue
     
 } from "@chakra-ui/react";
 import React from 'react'
@@ -43,21 +44,21 @@ import {FiCheckCircle} from "react-icons/fi";
                  <Text fontSize="md">Follow the instruction on device</Text>
                
                  <VStack mt="10px">
-                   <Button variant="subtle" width='full'  height='50px'rounded="xl">
+                   <Button width='full'  height='50px'rounded="xl">
                      <HiArrowRight fontSize='20px'/>
                         <span>&nbsp; &nbsp;</span>
                          <Text  align="center">Select the Wallet On the Device</Text>
                          <Spacer/>
                          <HiCheck fontSize='20px'/>
                      </Button>
-                   <Button variant="subtle" width='full'  height='50px'rounded="xl">
+                   <Button  width='full'  height='50px'rounded="xl">
                    <HiArrowRight fontSize='20px'/>
                       <span>&nbsp; &nbsp;</span>
                       <Text  align="center">Select the Wallet On the Device</Text>
                       <Spacer/>
                       <HiCheck fontSize='20px'/>
                    </Button>
-                   <Button variant="subtle" width='full'  height='50px'rounded="xl">
+                   <Button width='full'  height='50px'rounded="xl">
                    <HiArrowRight fontSize='20px'/>
                       <span>&nbsp; &nbsp;</span>
                       <Text  align="center">Select the Wallet On the Device</Text>
@@ -76,7 +77,7 @@ import {FiCheckCircle} from "react-icons/fi";
         title: 'Verification',
         children: <Box>
            <Box height="30px"/>
-           <Box borderWidth={1} borderColor="gray.200" borderStyle="dashed" rounded="xl" height='120px'alignContent='center' bgColor='gray.600'>
+           <Box borderWidth={1} borderColor="gray.200" borderStyle="dashed" rounded="xl" height='120px'alignContent='center' bg={useColorModeValue("gray.50", "gray.700")}>
             <Center>
               <Text fontSize="2xl" color='yellow.400' as='b' marginTop={10}>25BKJNKNLJL58fjkdhfk26dnfds15</Text>
             </Center>
@@ -84,7 +85,7 @@ import {FiCheckCircle} from "react-icons/fi";
             <Box height="50px"/>
             <Text fontSize="md">Verify the address on the device</Text>
             <Box height="20px"/>
-            <Button variant="subtle" width='full'  height='50px'rounded="xl">
+            <Button width='full'  height='50px'rounded="xl">
                    <HiArrowRight fontSize='20px'/>
                       <span>&nbsp; &nbsp;</span>
                       <Text  align="center">Please match the address to be shown in X1 Wallet</Text>
@@ -101,14 +102,15 @@ import {FiCheckCircle} from "react-icons/fi";
           <Box height="30px"/>
           <Text fontSize="md">Coin Address</Text>
           <Box height="20px"/>
-          <Box  rounded="xl" height='60px'alignContent='center' bgColor='gray.800' alignItems='center'>
+          <Box  borderWidth={1} rounded="xl" height='60px'alignContent='center' bg={useColorModeValue("gray.50", "gray.700")} alignItems='center'>
             <HStack>
               <Center>
               <Text fontSize="2xl" color='yellow.400' as='b' marginTop={3} marginLeft={5}>25BKJNKNLJL58fjkdhfk26dnfds15</Text>
               
               </Center>
                <span>&nbsp;&nbsp;&nbsp;</span>
-              <Button label='Copy' marginTop={5}/>
+              <Button  marginTop={5}>
+              Copy</Button>
               </HStack>
             </Box>
           <Box height="20px"/>
@@ -134,18 +136,22 @@ import {FiCheckCircle} from "react-icons/fi";
         </Stepper>
         <ButtonGroup width="100%">
           <Button
-            label="Back"
+            
             onClick={back}
             isDisabled={step === 0}
             variant="ghost"
-          />
+          >
+          Back
+          </Button>
           <Spacer />
           <Button
-            label="Next"
+            
             onClick={next}
             isDisabled={step >= 3}
             colorScheme="primary"
-          />
+          >
+          Next
+          </Button>
         </ButtonGroup>
       </>
     )

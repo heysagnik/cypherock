@@ -1,4 +1,4 @@
-import { ColorModeScript,ChakraProvider,extendTheme } from '@chakra-ui/react';
+import { ColorModeScript,ChakraProvider,extendTheme,base } from '@chakra-ui/react';
 import { SaasProvider,ModalsProvider,baseTheme } from '@saas-ui/react'
 import React, { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
@@ -11,20 +11,20 @@ const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 const config = {
   initialColorMode: 'dark',
-  useSystemColorMode: false,
+  useSystemColorMode: true,
 }
 
 const theme = extendTheme({ config },baseTheme)
 
 root.render(
   <StrictMode>
-    
+    <ColorModeScript initialColorMode='dark'/>
     <ChakraProvider theme={theme}>
-     <SaasProvider >
+     
       <ModalsProvider>
            <App />
        </ModalsProvider>
-     </SaasProvider>
+    
    </ChakraProvider>
   </StrictMode>
 );
