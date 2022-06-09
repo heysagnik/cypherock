@@ -79,7 +79,7 @@ import {FiCheckCircle} from "react-icons/fi";
            <Box height="30px"/>
            <Box borderWidth={1} borderColor="gray.200" borderStyle="dashed" rounded="xl" height='auto'alignContent='center' bg={useColorModeValue("gray.50", "gray.700")}>
             <Center>
-              <Text fontSize="2xl" color='yellow.400' as='b' marginTop='3' marginBottom='3'>25BKJNKNLJL58fjkdhfk26dnfds15</Text>
+              <Text fontSize="auto" color='yellow.400' as='b' marginTop='3' marginBottom='3'>25BKJNKNLJL58fjkdhfk26dnfds15</Text>
             </Center>
             </Box>
             <Box height="50px"/>
