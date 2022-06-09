@@ -190,12 +190,12 @@ export default function App() {
         <Box as="main" p="4">
           {/* Add content here, remove div below  */}
           <HStack spacing="4">
-            <Box w= "1070px">
-              <Text fontSize="2xl" fontWeight="semibold" color="#C78D4E">
+            
+              <Text fontSize="2xl" fontWeight="bold" color="#C78D4E">
                 Wallet 1
               </Text>
-            </Box>
-            <Button color="#CAA276" leftIcon={<FiPlus/>} w="30">
+            <Spacer/>
+            <Button color="#CAA276" leftIcon={<FiPlus/>} >
               Add Coin
             </Button>
           </HStack>   
