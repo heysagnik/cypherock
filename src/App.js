@@ -156,13 +156,7 @@ export default function App() {
         </DrawerContent>
       </Drawer>
       <Box ml={{ base: 0, md: 60 }} transition=".3s ease">
-        <IconButton
-            aria-label="Menu"
-            display={{ base: "inline-flex", md: "none" }}
-            onClick={sidebar.onOpen}
-            icon={<FiMenu />}
-            size="sm"
-          />
+        
          <Flex
           as="header"
           align="center"
@@ -174,10 +168,17 @@ export default function App() {
           borderColor={useColorModeValue("inherit", "gray.700")}
           h="14"
         >
+          <IconButton
+            aria-label="Menu"
+            display={{ base: "inline-flex", md: "none" }}
+            onClick={sidebar.onOpen}
+            icon={<FiMenu />}
+            size="sm"
+          />
           
+       
           
-
-          <Flex align="center">
+         <Flex align="center">
               
          
        
