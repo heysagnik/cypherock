@@ -1,5 +1,8 @@
 import {
- 
+ Tag,
+  TagLabel,
+  TagLeftIcon,
+  TagRightIcon,
   Box,
   Collapse,
   Drawer,
@@ -121,11 +124,11 @@ export default function App() {
           />
         </NavItem>
         <Collapse in={wallets.isOpen}>
-          <NavItem pl="12" py="2" isactive>
+          <NavItem pl="12" py="2" color='yellow'>
             Wallet 1
           </NavItem>
           <NavItem pl="12" py="2">
-          <Button borderWidth="4px" borderStyle="dashed" rounded="md" h="6" variant="ghost">
+          <Button borderWidth={1} borderStyle="dashed" rounded="md" variant="ghost">
             + add wallet
             </Button>
           </NavItem>
@@ -174,28 +177,29 @@ export default function App() {
           
 
           <Flex align="center">
-              <HStack spacing="4">
-                <Box width='980px'/>
+              
+         
        
-              <FiCheck color="#4848F6"/> <Text color="#F5CEA3">Synchronized</Text>
+              
           
-          <ButtonGroup gap='2'>
+          <ButtonGroup gap='2' align='right'>
+             <Tag><TagLeftIcon as={FiCheck}/><TagLabel color="#F5CEA3">Synchronized</TagLabel></Tag>
             <IconButton icon={<FiDisc/>} onClick={toggleColorMode} />
             <IconButton icon={<FiLock color="#CAA276"/>} />
           </ButtonGroup>
-          </HStack>
+         
           </Flex>
         </Flex>
 
         <Box as="main" p="4">
           {/* Add content here, remove div below  */}
           <HStack spacing="4">
-            <Box w= "1070px">
-              <Text fontSize="2xl" fontWeight="semibold" color="#C78D4E">
+            
+              <Text fontSize="2xl" fontWeight="bold" color="#C78D4E">
                 Wallet 1
               </Text>
-            </Box>
-            <Button color="#CAA276" leftIcon={<FiPlus/>} w="30">
+            <Spacer/>
+            <Button color="#CAA276" leftIcon={<FiPlus/>} >
               Add Coin
             </Button>
           </HStack>   
