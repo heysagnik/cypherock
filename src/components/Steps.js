@@ -77,9 +77,9 @@ import {FiCheckCircle} from "react-icons/fi";
         title: 'Verification',
         children: <Box>
            <Box height="30px"/>
-           <Box borderWidth={1} borderColor="gray.200" borderStyle="dashed" rounded="xl" height='120px'alignContent='center' bg={useColorModeValue("gray.50", "gray.700")}>
+           <Box borderWidth={1} borderColor="gray.200" borderStyle="dashed" rounded="xl" height='auto'alignContent='center' bg={useColorModeValue("gray.50", "gray.700")}>
             <Center>
-              <Text fontSize="2xl" color='yellow.400' as='b' marginTop={10}>25BKJNKNLJL58fjkdhfk26dnfds15</Text>
+              <Text fontSize="2xl" color='yellow.400' as='b' marginTop='3' marginBottom='3'>25BKJNKNLJL58fjkdhfk26dnfds15</Text>
             </Center>
             </Box>
             <Box height="50px"/>
@@ -102,20 +102,20 @@ import {FiCheckCircle} from "react-icons/fi";
           <Box height="30px"/>
           <Text fontSize="md">Coin Address</Text>
           <Box height="20px"/>
-          <Box  borderWidth={1} rounded="xl" height='60px'alignContent='center' bg={useColorModeValue("gray.50", "gray.700")} alignItems='center'>
-            <HStack>
-              <Center>
-              <Text fontSize="2xl" color='yellow.400' as='b' marginTop={3} marginLeft={5}>25BKJNKNLJL58fjkdhfk26dnfds15</Text>
+          <Box  borderWidth={1} rounded="xl" height='auto'alignContent='center' bg={useColorModeValue("gray.50", "gray.700")} >
+            <Center>
+               <HStack spacing='5'>
               
-              </Center>
-               <span>&nbsp;&nbsp;&nbsp;</span>
-              <Button  marginTop={5}>
+              <Text fontSize="auto" color='yellow.400' as='b' marginTop='3' marginLeft='3'>25BKJNKNLJL58fjkdhfk26dnfds15</Text>
+              
+              <Button >
               Copy</Button>
               </HStack>
+            </Center>
             </Box>
           <Box height="20px"/>
-          <HStack><FiCheckCircle/>
-          <Text fontSize="md">Address Verified</Text>
+          <HStack><FiCheckCircle color='green'/>
+          <Text fontSize="md" color='green'>Address Verified</Text>
           </HStack>
           <Box height="20px"/>
           </Box>,
@@ -124,13 +124,13 @@ import {FiCheckCircle} from "react-icons/fi";
   
     return (
       <>
-        <Stepper step={step} mb="2" varian='subtle'>
+        <Stepper step={step} mb="2" color scheme='yellow'>
           {steps.map((args, i) => (
             <StepperStep key={i} {...args} />
           ))}
           <StepperCompleted py="4">
             <Center>
-            <Button>Re Verify</Button>
+            <Button >Re Verify</Button>
             </Center>
           </StepperCompleted>
         </Stepper>
@@ -148,7 +148,7 @@ import {FiCheckCircle} from "react-icons/fi";
             
             onClick={next}
             isDisabled={step >= 3}
-            colorScheme="primary"
+            colorScheme="yellow"
           >
           Next
           </Button>
