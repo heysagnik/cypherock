@@ -20,11 +20,11 @@ root.render(
   <StrictMode>
     <ColorModeScript initialColorMode='dark'/>
     <ChakraProvider theme={theme}>
-     
+     <SaasProvider>
       <ModalsProvider>
            <App />
        </ModalsProvider>
-    
+     </SaasProvider>
    </ChakraProvider>
   </StrictMode>
 );
