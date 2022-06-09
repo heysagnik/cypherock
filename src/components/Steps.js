@@ -104,7 +104,7 @@ import {FiCheckCircle} from "react-icons/fi";
           <Box height="20px"/>
           <Box  borderWidth={1} rounded="xl" height='auto'alignContent='center' bg={useColorModeValue("gray.50", "gray.700")} >
             <Center>
-               <HStack spacing='5'>
+               <HStack spacing='3'>
               
               <Text fontSize="auto" color='yellow.400' as='b' marginTop='3' marginLeft='3'>25BKJNKNLJL58fjkdhfk26dnfds15</Text>
               
@@ -124,7 +124,7 @@ import {FiCheckCircle} from "react-icons/fi";
   
     return (
       <>
-        <Stepper step={step} mb="2" color scheme='yellow'>
+        <Stepper step={step} mb="2" colorScheme='yellow'>
           {steps.map((args, i) => (
             <StepperStep key={i} {...args} />
           ))}
