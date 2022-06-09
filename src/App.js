@@ -181,13 +181,13 @@ export default function App() {
          
        
               
-          
+          <Box justifyContent="flex-end">
           <ButtonGroup gap='2' align='right'>
              <Tag><TagLeftIcon as={FiCheck}/><TagLabel color="#F5CEA3">Synchronized</TagLabel></Tag>
             <IconButton icon={<FiDisc/>} onClick={toggleColorMode} />
             <IconButton icon={<FiLock color="#CAA276"/>} />
           </ButtonGroup>
-         
+         </Box>
           </Flex>
         </Flex>
 
