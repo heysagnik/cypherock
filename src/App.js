@@ -1,5 +1,8 @@
 import {
- 
+ Tag,
+  TagLabel,
+  TagLeftIcon,
+  TagRightIcon,
   Box,
   Collapse,
   Drawer,
@@ -180,7 +183,7 @@ export default function App() {
               
           
           <ButtonGroup gap='2' align='right'>
-             <Text color="#F5CEA3"><FiCheck color="#4848F6"/> Synchronized</Text>
+             <Tag colorScheme="#F5CEA3"><FiCheck color="#4848F6"/> <TagLabel>Synchronized</TagLabel></Tag>
             <IconButton icon={<FiDisc/>} onClick={toggleColorMode} />
             <IconButton icon={<FiLock color="#CAA276"/>} />
           </ButtonGroup>
