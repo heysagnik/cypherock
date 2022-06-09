@@ -1,17 +1,26 @@
-import { ColorModeScript } from '@chakra-ui/react';
+import { ColorModeScript,ChakraProvider } from '@chakra-ui/react';
+import { SaasProvider,ModalsProvider } from '@saas-ui/react'
 import React, { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
 
+
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
+
 
 root.render(
   <StrictMode>
     <ColorModeScript />
-    <App />
+    <ChakraProvider>
+     <SaasProvider >
+      <ModalsProvider>
+           <App />
+       </ModalsProvider>
+     </SaasProvider>
+   </ChakraProvider>
   </StrictMode>
 );
 
