@@ -14,7 +14,7 @@ import {
   useColorModeValue,
   useDisclosure,
   ButtonGroup,
-  Avatar,
+  Spacer,
   HStack,
   Table,
   Thead,
@@ -173,7 +173,8 @@ export default function App() {
 
           <Flex align="center">
               <HStack spacing="4">
-                <Box w= "900px"/>
+                <Box width='900px'/>
+       
               <FiCheck color="#4848F6"/> <Text color="#F5CEA3">Synchronized</Text>
           
           <ButtonGroup gap='2'>

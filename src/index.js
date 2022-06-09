@@ -1,5 +1,5 @@
 import { ColorModeScript,ChakraProvider,extendTheme } from '@chakra-ui/react';
-import { SaasProvider,ModalsProvider } from '@saas-ui/react'
+import { SaasProvider,ModalsProvider,baseTheme } from '@saas-ui/react'
 import React, { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
 import App from './App';
@@ -14,13 +14,13 @@ const config = {
   useSystemColorMode: false,
 }
 
-const theme = extendTheme({ config })
+const theme = extendTheme({ config },baseTheme)
 
 root.render(
   <StrictMode>
     
     <ChakraProvider theme={theme}>
-     <SaasProvider theme={theme} >
+     <SaasProvider >
       <ModalsProvider>
            <App />
        </ModalsProvider>
