@@ -86,11 +86,11 @@ import {FiCheckCircle} from "react-icons/fi";
             <Text fontSize="md">Verify the address on the device</Text>
             <Box height="20px"/>
             <Button width='full'  height='50px'rounded="xl">
-                   <HiArrowRight fontSize='20px'/>
+                   <HiArrowRight/>
                       <span>&nbsp; &nbsp;</span>
                       <Text  align="center">Please match the address to be shown in X1 Wallet</Text>
                       <Spacer/>
-                      <HiCheck fontSize='20px'/>
+                      <HiCheck/>
               </Button>
             <Box height="20px"/>
         </Box>,
@@ -106,7 +106,7 @@ import {FiCheckCircle} from "react-icons/fi";
             <Center>
                <HStack spacing='3'>
               
-              <Text fontSize="auto" color='yellow.400' as='b' marginTop='3' marginLeft='3'>25BKJNKNLJL58fjkdhfk26dnfds15</Text>
+              <Text fontSize="auto" color='yellow.400' as='b' marginTop='3' marginBottom='3'>25BKJNKNLJL58fjkdhfk26dnfds15</Text>
               
               <Button >
               Copy</Button>
