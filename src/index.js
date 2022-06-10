@@ -11,7 +11,7 @@ const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 const config = {
   initialColorMode: 'dark',
-  useSystemColorMode: true,
+  useSystemColorMode: 'false',
 }
 
 const theme = extendTheme({ config },baseTheme)
