@@ -11,7 +11,7 @@ const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 const config = {
   initialColorMode: 'dark',
-  useSystemColorMode: 'false',
+  useSystemColorMode: 'true',
 }
 
 const theme = extendTheme({ config },baseTheme)
@@ -19,7 +19,7 @@ const theme = extendTheme({ config },baseTheme)
 root.render(
   <StrictMode>
     
-    <ChakraProvider >
+    <ChakraProvider theme={theme} >
     
      <SaasProvider>
    
