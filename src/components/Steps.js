@@ -88,7 +88,7 @@ import {FiCheckCircle} from "react-icons/fi";
             <Button width='full'  height='50px'rounded="xl">
                    <HiArrowRight/>
                       <span>&nbsp; &nbsp;</span>
-                      <Text  align="center">Please match the address to be shown in X1 Wallet</Text>
+                      <Text  align="center">Please match the address</Text>
                       <Spacer/>
                       <HiCheck/>
               </Button>
