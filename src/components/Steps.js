@@ -45,25 +45,25 @@ import {FiCheckCircle} from "react-icons/fi";
                
                  <VStack mt="10px">
                    <Button width='full'  height='50px'rounded="xl">
-                     <HiArrowRight fontSize='20px'/>
+                     <HiArrowRight color="#F5CEA3"/>
                         <span>&nbsp; &nbsp;</span>
-                         <Text  align="center" colorScheme="purple">Select the Wallet On the Device</Text>
+                         <Text  align="center" color="#8484F1">Select the Wallet On the Device</Text>
                          <Spacer/>
-                         <HiCheck fontSize='20px'/>
+                         <HiCheck/>
                      </Button>
                    <Button  width='full'  height='50px'rounded="xl">
-                   <HiArrowRight fontSize='20px'/>
+                   <HiArrowRight color="#F5CEA3"/>
                       <span>&nbsp; &nbsp;</span>
-                      <Text  align="center" colorScheme="purple">Select the Coin On the Device</Text>
+                      <Text  align="center" color="#8484F1">Select the Coin On the Device</Text>
                       <Spacer/>
-                      <HiCheck fontSize='20px'/>
+                      <HiCheck />
                    </Button>
                    <Button width='full'  height='50px'rounded="xl">
-                   <HiArrowRight fontSize='20px'/>
+                   <HiArrowRight color="#F5CEA3"/>
                       <span>&nbsp; &nbsp;</span>
-                      <Text  align="center" colorScheme="purple">Tap 1 Card of the 4 Cards</Text>
+                      <Text  align="center" color="#8484F1">Tap 1 Card of the 4 Cards</Text>
                       <Spacer/>
-                      <HiCheck fontSize='20px'/>
+                      <HiCheck />
                    </Button>
                   
                   </VStack>
