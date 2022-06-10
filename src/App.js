@@ -33,7 +33,7 @@ import {
 
 import {BsArrowLeftRight } from "react-icons/bs";
 import {IoWallet} from "react-icons/io5";
-import { FiMenu, FiCheck,FiLock ,FiDisc,FiPlus,FiHome,FiSettings,FiArrowDownLeft,FiArrowUpRight} from "react-icons/fi";
+import { FiMenu, FiCheck,FiLock ,FiDisc,FiPlus,FiHome,FiSettings,FiArrowDownLeft,FiArrowUpRight,FiMoon,FiSun} from "react-icons/fi";
 import {GrBitcoin} from "react-icons/gr";
 import {SiEthereum,SiBinance} from "react-icons/si";
 import { MdKeyboardArrowRight } from "react-icons/md";
@@ -48,8 +48,9 @@ export default function App() {
   const wallets = useDisclosure();
   const color = useColorModeValue("gray.600", "gray.300");
   const modals = useModals();
-  const { colorMode, toggleColorMode } = useColorMode()
-  
+  const { colorMode, toggleColorMode } = useColorMode();
+  const SwitchIcon = useColorModeValue(FiSun,FiMoon);
+
   const NavItem = (props) => {
     const { icon, children, ...rest } = props;
     return (
@@ -128,9 +129,9 @@ export default function App() {
             Wallet 1
           </NavItem>
           <NavItem pl="12" py="2">
-          <Button borderWidth={1} borderStyle="dashed" rounded="md" variant="ghost" leftIcon={<FiPlus/>}>
+          <Button borderWidth={2} borderStyle="dashed" rounded="md" variant="ghost" leftIcon={<FiPlus/>}>
              add wallet
-            </Button>
+          </Button>
           </NavItem>
         </Collapse>
         <NavItem icon={BsArrowLeftRight}>Last Transactions</NavItem>
@@ -186,7 +187,7 @@ export default function App() {
           
           <ButtonGroup gap='2' align='right'>
              <Tag><TagLeftIcon as={FiCheck}/><TagLabel color="#F5CEA3">Synchronized</TagLabel></Tag>
-            <IconButton icon={<FiDisc/>} onClick={toggleColorMode} />
+            <IconButton icon={<SwitchIcon />} onClick={toggleColorMode} />
             <IconButton icon={<FiLock color="#CAA276"/>} />
           </ButtonGroup>
          
