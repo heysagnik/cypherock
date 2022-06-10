@@ -18,11 +18,13 @@ const theme = extendTheme({ config },baseTheme)
 
 root.render(
   <StrictMode>
-    <ColorModeScript initialColorMode='dark'/>
+    
     <ChakraProvider >
     
      <SaasProvider>
+   
       <ModalsProvider>
+           <ColorModeScript initialColorMode='dark'/>
            <App />
        </ModalsProvider>
      </SaasProvider>
