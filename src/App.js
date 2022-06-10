@@ -124,7 +124,7 @@ export default function App() {
           />
         </NavItem>
         <Collapse in={wallets.isOpen}>
-          <NavItem pl="12" py="2" color='yellow'>
+          <NavItem pl="12" py="2" colorScheme='yellow'>
             Wallet 1
           </NavItem>
           <NavItem pl="12" py="2">
