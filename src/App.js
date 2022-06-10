@@ -187,7 +187,7 @@ export default function App() {
           
           <ButtonGroup gap='2' align='right'>
              <Tag><TagLeftIcon as={FiCheck}/><TagLabel color="#F5CEA3">Synchronized</TagLabel></Tag>
-            <IconButton icon={<SwitchIcon />} {...props} onClick={toggleColorMode} />
+            <IconButton icon={<SwitchIcon />} onClick={toggleColorMode} />
             <IconButton icon={<FiLock color="#CAA276"/>} />
           </ButtonGroup>
          
