@@ -128,8 +128,8 @@ export default function App() {
             Wallet 1
           </NavItem>
           <NavItem pl="12" py="2">
-          <Button borderWidth={1} borderStyle="dashed" rounded="md" variant="ghost">
-            + add wallet
+          <Button borderWidth={1} borderStyle="dashed" rounded="md" variant="ghost" leftIcon={<FiPlus/>}>
+             add wallet
             </Button>
           </NavItem>
         </Collapse>
