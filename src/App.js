@@ -58,9 +58,9 @@ export default function App() {
       description: 'Please switch to dark mode',
       icon: <FiTool/>,
       isClosable: true,
-      duration: 9000,
+     
       status: 'warning',
-      variant: 'subtle',
+      
     })
   }, [])
 
