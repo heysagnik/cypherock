@@ -60,7 +60,7 @@ export default function App() {
       isClosable: true,
      
       status: 'warning',
-      variant: 'subtle',
+      
     })
   }, [])
 
