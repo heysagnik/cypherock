@@ -32,7 +32,7 @@ import {
 } from "@chakra-ui/react";
 
 import {BsArrowLeftRight } from "react-icons/bs";
-import { IoIosWallet } from "react-icons/io";
+import {IoWallet} from "react-icons/io5";
 import { FiMenu, FiCheck,FiLock ,FiDisc,FiPlus,FiHome,FiSettings,FiArrowDownLeft,FiArrowUpRight} from "react-icons/fi";
 import {GrBitcoin} from "react-icons/gr";
 import {SiEthereum,SiBinance} from "react-icons/si";
@@ -115,7 +115,7 @@ export default function App() {
       >
         <NavItem icon={FiHome}>Portfolio</NavItem>
         
-        <NavItem icon={IoIosWallet} onClick={wallets.onToggle}>
+        <NavItem icon={IoWallet} onClick={wallets.onToggle}>
           Wallets
           <Icon
             as={MdKeyboardArrowRight}
