@@ -22,7 +22,7 @@ import React from 'react'
 import { HiCheck,HiArrowRight } from "react-icons/hi";
 import {FiCheckCircle} from "react-icons/fi";
 
- export function WithContent() {
+ export  function WithContent() {
     const [step, setStep] = React.useState(0)
   
     const back = () => {
@@ -44,27 +44,27 @@ import {FiCheckCircle} from "react-icons/fi";
                  <Text fontSize="md">Follow the instruction on device</Text>
                
                  <VStack mt="10px">
-                   <Button width='full'  height='50px'rounded="xl">
-                     <HiArrowRight color="#F5CEA3"/>
-                        <span>&nbsp; &nbsp;</span>
-                         <Text  align="center" color="#8484F1">Select the Wallet On the Device</Text>
-                         <Spacer/>
-                         <HiCheck/>
+                   <Button width='full'  height='50px' rounded="xl" leftIcon={<HiArrowRight color="#F5CEA3" />} rightIcon={ <HiCheck fontSize='20px'/>}>
+                     
+                        
+                         <Text  align="center" color="#8484F1"   >Select the Wallet On the Device</Text>
+                         <Spacer ml="10px"/>
+                          
                      </Button>
-                   <Button  width='full'  height='50px'rounded="xl">
-                   <HiArrowRight color="#F5CEA3"/>
-                      <span>&nbsp; &nbsp;</span>
-                      <Text  align="center" color="#8484F1">Select the Coin On the Device</Text>
-                      <Spacer/>
-                      <HiCheck />
-                   </Button>
-                   <Button width='full'  height='50px'rounded="xl">
-                   <HiArrowRight color="#F5CEA3"/>
-                      <span>&nbsp; &nbsp;</span>
-                      <Text  align="center" color="#8484F1">Tap 1 Card of the 4 Cards</Text>
-                      <Spacer/>
-                      <HiCheck />
-                   </Button>
+                     <Button width='full'  height='50px' rounded="xl" leftIcon={<HiArrowRight color="#F5CEA3" />} rightIcon={ <HiCheck fontSize='20px'/>}>
+                     
+                        
+                     <Text  align="center" color="#8484F1"   >Select the Coin On the Device</Text>
+                     <Spacer ml="10px"/>
+                      
+                    </Button>
+                    <Button width='full' height='50px'rounded="xl" leftIcon={<HiArrowRight color="#F5CEA3" />} rightIcon={ <HiCheck fontSize='20px'/>}>
+                     
+                        
+                     <Text  align="center" color="#8484F1" >Tap the 1 Card out of 4</Text>
+                     <Spacer ml="10px"/>
+                      
+                 </Button>
                   
                   </VStack>
                   <Box h="20px"/>

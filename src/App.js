@@ -28,20 +28,21 @@ import {
   Td,
   TableCaption,
   TableContainer,
-
+  useToast,
 } from "@chakra-ui/react";
 
 import {BsArrowLeftRight } from "react-icons/bs";
 import {IoWallet} from "react-icons/io5";
-import { FiMenu, FiCheck,FiLock ,FiDisc,FiPlus,FiHome,FiSettings,FiArrowDownLeft,FiArrowUpRight,FiMoon,FiSun} from "react-icons/fi";
+import { FiMenu, FiCheck,FiLock ,FiTool,FiPlus,FiHome,FiSettings,FiArrowDownLeft,FiArrowUpRight,FiMoon,FiSun} from "react-icons/fi";
 import {GrBitcoin} from "react-icons/gr";
 import {SiEthereum,SiBinance} from "react-icons/si";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import React from "react";
-import {  Button,useModals } from '@saas-ui/react';
+import {  Button,useModals  } from '@saas-ui/react';
 import {WithContent} from './components/Steps';
 import Logo from './logo.svg';
 import { useColorMode } from "@chakra-ui/react";
+
 
 export default function App() {
   const sidebar = useDisclosure();
@@ -50,6 +51,18 @@ export default function App() {
   const modals = useModals();
   const { colorMode, toggleColorMode } = useColorMode();
   const SwitchIcon = useColorModeValue(FiSun,FiMoon);
+  const toast = useToast();
+  React.useEffect(() => {
+    toast({
+      title: 'Attention Please',
+      description: 'Please switch to dark mode',
+      icon: <FiTool/>,
+      isClosable: true,
+      duration: 9000,
+      status: 'warning',
+      variant: 'subtle',
+    })
+  }, [])
 
   const NavItem = (props) => {
     const { icon, children, ...rest } = props;
@@ -102,6 +115,7 @@ export default function App() {
       w="60"
       {...props}
     >
+      
       <Flex px="4" py="5" align="center">
       
        <Image src={Logo} alt="logo" />
@@ -125,7 +139,7 @@ export default function App() {
           />
         </NavItem>
         <Collapse in={wallets.isOpen}>
-          <NavItem pl="12" py="2" colorScheme='yellow'>
+          <NavItem pl="12" py="2" >
             Wallet 1
           </NavItem>
           <NavItem pl="12" py="2">
@@ -140,11 +154,14 @@ export default function App() {
     </Box>
   );
   return (
+    
+
     <Box
       as="section"
       bg={useColorModeValue("gray.50", "gray.700")}
       minH="100vh"
     >
+       
       <SidebarContent display={{ base: "none", md: "unset" }} />
       <Drawer
         isOpen={sidebar.isOpen}
@@ -157,7 +174,7 @@ export default function App() {
         </DrawerContent>
       </Drawer>
       <Box ml={{ base: 0, md: 60 }} transition=".3s ease">
-        
+      
          <Flex
           as="header"
           align="center"
@@ -404,10 +421,12 @@ export default function App() {
     </Tbody>
     </Table>
   </TableContainer>
+      
         </Box>
 
-        
-      </Box>
+      
+      </Box> 
+     
     </Box>
   );
-}
+    }
