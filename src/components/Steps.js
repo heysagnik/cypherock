@@ -86,11 +86,11 @@ import {FiCheckCircle} from "react-icons/fi";
             <Text fontSize="md">Verify the address on the device</Text>
             <Box height="20px"/>
             <Button width='full'  height='50px'rounded="xl">
-                   <HiArrowRight/>
+                   <HiArrowRight fontSize='20px'/>
                       <span>&nbsp; &nbsp;</span>
                       <Text  align="center">Please match the address</Text>
                       <Spacer/>
-                      <HiCheck/>
+                      <HiCheck fontSize='20px'/>
               </Button>
             <Box height="20px"/>
         </Box>,
